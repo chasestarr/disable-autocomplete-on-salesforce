@@ -1,6 +1,14 @@
 {
+  "manifest_version": 2,
+
   "name": "Disable input autocomplete on salesforce",
   "version": "1.0",
   "description": "Disables all input autocompletes on salesforce",
-  "manifest_version": 2
+
+  "content_scripts": [
+    {
+      "matches": ["*://*.force.com/*"],
+      "js": ["disable-salesforce-autocomplete.js"]
+    }
+  ]
 }
